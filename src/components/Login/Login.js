@@ -8,7 +8,7 @@ import LoginForm from "./LoginForm";
 import { LoginFields } from "../../Utilities/FormsModel";
 import MakeContextConsumer from "../Auth/MakeContextConsumer";
 import AuthCredentials from "../Auth/AuthCredentials";
-
+console.log(process.env.NODE_ENV)
 class Login extends Component {
   constructor(props) {
     super(props);
@@ -40,7 +40,7 @@ class Login extends Component {
         email: credentials.email,
         password: credentials.password
       }
-    }).then(function(response) {
+    }).then(function (response) {
       console.log(response);
       const authData = new AuthCredentials(
         true,
