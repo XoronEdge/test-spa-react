@@ -57,8 +57,7 @@ class Login extends Component {
   render() {
     console.log(this.props.location);
     if (
-      (this.props.authData.isAuthenticated && this.props.authData.uid) ||
-      true
+      (this.props.authData.isAuthenticated && this.props.authData.uid)
     ) {
       return <Redirect to="/home" />;
     }
