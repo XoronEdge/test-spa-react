@@ -10,15 +10,15 @@ class Home extends Component {
   render() {
     const { match, location } = this.props;
     console.log(location);
-    // if (
-    //   this.props.authData.isAuthenticated == false ||
-    //   this.props.authData.uid == ""
-    // ) {
-    //   console.log("dont get me here");
-    //   return (
-    //     <Redirect to={{ pathname: "/", state: { callbackURL: match.url } }} />
-    //   );
-    // }
+    if (
+      this.props.authData.isAuthenticated == false ||
+      this.props.authData.uid == ""
+    ) {
+      console.log("dont get me here");
+      return (
+        <Redirect to={{ pathname: "/", state: { callbackURL: match.url } }} />
+      );
+    }
     return (
       <div className="page-wrapper">
         <Sidebar match={match} />
